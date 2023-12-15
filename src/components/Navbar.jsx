@@ -17,12 +17,31 @@ const Navbar = () => {
         boxShadow: "0px 1px 50px rgb(210,210,210)",
       }}
     >
-      <h2 style={{marginLeft:'2rem', fontSize: "2.15rem", marginRight: "5rem" }}>Site Name</h2>
+      <h2
+        style={{ marginLeft: "2rem", fontSize: "2.15rem", marginRight: "5rem" }}
+      >
+        Site Name
+      </h2>
       {
-        <div style={{flex:0.75, display:"flex", justifyContent:'space-evenly'}}>
+        <div
+          style={{
+            flex: 0.75,
+            display: "flex",
+            justifyContent: "space-evenly",
+          }}
+        >
           <CLink to="/">Home</CLink>
           <CLink to="about">About</CLink>
-          <a style={{ color: "var(--text)", textDecoration: "none", fontSize:'1.15rem'}} href="#portfolio">Portfolio</a>
+          <a
+            style={{
+              color: "var(--text)",
+              textDecoration: "none",
+              fontSize: "1.15rem",
+            }}
+            href="#portfolio"
+          >
+            Portfolio
+          </a>
           <CLink to="testimonials">Testimonials</CLink>
           <CLink to="blog">Blog</CLink>
           <CLink to="contact">Contact</CLink>
