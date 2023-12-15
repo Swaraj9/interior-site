@@ -12,7 +12,7 @@ import Contact from "./pages/Contact.jsx";
 
 const router = createBrowserRouter([
   {
-    path: "/interior-site",
+    path: "/",
     element: <App />,
     children: [
       {
@@ -41,7 +41,7 @@ const router = createBrowserRouter([
       },
     ],
   },
-]);
+], {basename:"/interior-site"});
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
