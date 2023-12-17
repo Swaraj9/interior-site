@@ -1,10 +1,23 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import { HashLink } from "react-router-hash-link";
 
-const CLink = ({ style, ...args }) => {
+const CLink = ({ style, color, ...args }) => {
+  const [hover, setHover] = useState(false);
+
   return (
-    <Link
-      style={{ color: "var(--text)", textDecoration: "none", fontSize:'1.15rem', ...style }}
+    <HashLink
+      onMouseEnter={() => setHover(true)}
+      onMouseLeave={() => setHover(false)}
+      smooth
+      style={{
+        color: color,
+        textDecoration: "none",
+        fontSize: "1.25rem",
+        transitionDuration: "0.5s",
+        borderBottom: hover ? `2px solid ${color}` : "2px solid transparent",
+        ...style,
+      }}
       {...args}
     />
   );

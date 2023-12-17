@@ -1,7 +1,24 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import CLink from "./CLink";
+import { useLocation } from "react-router-dom";
 
 const Navbar = () => {
+  const location = useLocation();
+  const [scrollPosition, setScrollPosition] = useState(0);
+
+  const handleScroll = () => {
+    const position = window.pageYOffset;
+    setScrollPosition(position);
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll, { passive: true });
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
     <div
       style={{
@@ -13,14 +30,17 @@ const Navbar = () => {
         display: "flex",
         alignItems: "center",
         justifyContent: "space-between",
-        backgroundColor: "var(--primary)",
-        boxShadow: "0px 1px 50px rgb(210,210,210)",
+        color: location.pathname == "/" && scrollPosition == 0 ? "var(--primary)" : "var(--text)",
+        backgroundColor: location.pathname == "/" && scrollPosition == 0 ? "transparent" : "var(--primary)",
+        boxShadow:
+          location.pathname == "/" && scrollPosition == 0 ? "none" : "0px 1px 50px rgb(210,210,210)",
+        transitionDuration: "0.5s",
       }}
     >
       <h2
         style={{ marginLeft: "2rem", fontSize: "2.15rem", marginRight: "5rem" }}
       >
-        Site Name
+        Soham Enterprises
       </h2>
       {
         <div
@@ -30,21 +50,24 @@ const Navbar = () => {
             justifyContent: "space-evenly",
           }}
         >
-          <CLink to="/">Home</CLink>
-          <CLink to="about">About</CLink>
-          <a
-            style={{
-              color: "var(--text)",
-              textDecoration: "none",
-              fontSize: "1.15rem",
-            }}
-            href="#portfolio"
+          <CLink
+            color={location.pathname == "/" && scrollPosition == 0 ? "var(--primary)" : "var(--text)"}
+            to="/#hero"
+          >
+            Home
+          </CLink>
+          <CLink
+            color={location.pathname == "/" && scrollPosition == 0 ? "var(--primary)" : "var(--text)"}
+            to="/#portfolio"
           >
             Portfolio
-          </a>
-          <CLink to="testimonials">Testimonials</CLink>
-          <CLink to="blog">Blog</CLink>
-          <CLink to="contact">Contact</CLink>
+          </CLink>
+          <CLink
+            color={location.pathname == "/" && scrollPosition == 0 ? "var(--primary)" : "var(--text)"}
+            to="testimonials"
+          >
+            Testimonials
+          </CLink>
         </div>
       }
     </div>

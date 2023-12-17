@@ -46,10 +46,15 @@ const Card = ({ name, image }) => {
 const Home = () => {
   return (
     <div
-      style={{ display: "flex", flexDirection: "column", alignItems: "center" }}
+      style={{
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+        marginTop: "calc(-1*(2.15rem + 2*25px + 1rem))",
+      }}
     >
-      <div>
-        <img style={{ width: "100%" }} src={hero} alt="hero" />
+      <div id="hero">
+        <img style={{ width: "100%", height: "100vh" }} src={hero} alt="hero" />
       </div>
       <div
         style={{
