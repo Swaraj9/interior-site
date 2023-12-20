@@ -43,7 +43,8 @@ const Footer = () => {
             <FaXTwitter />
           </div>
         </div>
-        <div>+91 00000 00000</div>
+        <div>+91 98698 30147</div>
+        <div>+91 93240 85307</div>
       </div>
     </div>
   );
