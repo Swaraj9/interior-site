@@ -1,5 +1,5 @@
 import React from "react";
-import hero from "../assets/hero.jpg";
+import hero from "../assets/hero.webp";
 import about from "../assets/about.jpg";
 import im1 from "../assets/portfolio/im1.jpg";
 import im2 from "../assets/portfolio/im2.jpg";
@@ -53,8 +53,8 @@ const Home = () => {
         marginTop: "calc(-1*(2.15rem + 2*25px + 1rem))",
       }}
     >
-      <div id="hero">
-        <img style={{ width: "100%", height: "100vh" }} src={hero} alt="hero" />
+      <div id="hero" style={{width:'100%'}}>
+        <img style={{ width: "100%", height: "auto" }} src={hero} alt="hero" />
       </div>
       <div
         style={{
@@ -82,7 +82,8 @@ const Home = () => {
         <div>
           <img
             style={{
-              height: "800px",
+              height: "100%",
+              maxHeight:'500px',
               borderTopLeftRadius: "10px",
               borderBottomLeftRadius: "10px",
               marginBottom: "-7px",
@@ -102,22 +103,13 @@ const Home = () => {
             About Us
           </div>
           <div style={{ lineHeight: "1.75rem", marginBottom: "2rem" }}>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus
-            euismod feugiat orci, sed molestie urna vulputate nec. Aenean sit
-            amet efficitur neque, eget consequat risus. Nullam pellentesque
-            imperdiet purus, blandit consequat mauris eleifend ac. Curabitur
-            felis purus, sodales sit amet iaculis in, laoreet viverra leo.
-            Aliquam tristique, tellus vitae malesuada laoreet, tellus turpis
-            cursus risus, eget euismod enim tortor quis lorem. In eleifend
-            facilisis massa sed lacinia. Quisque lobortis blandit vestibulum.
-            Curabitur id interdum est. Proin ut metus vel massa fermentum
-            rhoncus vitae in lorem. Morbi tempor est sit amet sem ornare, eget
-            efficitur justo accumsan. Mauris aliquet dapibus turpis, at
-            pellentesque turpis ornare a. Cras consectetur maximus diam at
-            iaculis. Sed ut faucibus leo. Praesent consectetur interdum metus,
-            eu porttitor eros iaculis ut.
+          Soham Enterprise has been ceaselessly designing beautiful homes, commercial spaces, hotels, malls and offices with unique designs. We create your dream, considering not just beauty but your comfort. Be it your bedroom to sink in after a hectic day, a kitchen that sets in with your culinary experiments, or office space to build your passion, we add a creative spark to it. Once you are on board, we turn your dream into reality.
+
+We offer a complete range of design, fit-out and contracting solutions by delivering high-quality, cost- effective services. Ensuring our relationship with our clients is our number one priority, and the integrity of our dedicated and committed team drives our dependability and maximises our clients' satisfaction.
+
+We are a team of professionals who have started their careers from zero and are now considered the most efficient craftsman in their respective fields.
           </div>
-          <div style={{ lineHeight: "1.75rem", marginBottom: "2rem" }}>
+          {/* <div style={{ lineHeight: "1.75rem", marginBottom: "2rem" }}>
             Cras sem mauris, scelerisque ut malesuada id, aliquam in sem. Orci
             varius natoque penatibus et magnis dis parturient montes, nascetur
             ridiculus mus. Etiam varius sapien velit, sit amet malesuada nunc
@@ -129,21 +121,7 @@ const Home = () => {
             Cras vitae pretium sem. Integer lacinia in ex sit amet pellentesque.
             Donec pellentesque libero et gravida tempor. Proin in auctor libero.
             Mauris dapibus a sapien eu pretium.
-          </div>
-          <button
-            style={{
-              borderRadius: "10px",
-              outline: "none",
-              border: "2px solid var(--text)",
-              padding: "15px 20px",
-              fontSize: "1.1rem",
-              backgroundColor: "transparent",
-              color: "var(--text)",
-              width: "fit-content",
-            }}
-          >
-            READ MORE
-          </button>
+          </div> */}
         </div>
       </div>
       <div

@@ -1,6 +1,7 @@
 import React from "react";
 import { FaFacebookF, FaInstagram } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
+import logo from '../assets/logoT.png'
 
 const Footer = () => {
   return (
@@ -27,7 +28,7 @@ const Footer = () => {
       >
         <a>Email Link</a>
         <div style={{display:'flex', flexDirection:'column', alignItems:'center'}}>
-          <div style={{fontSize:'2rem', marginBottom:'3rem'}}>Soham Enterprise</div>
+          <img src={logo} alt="Logo" style={{fontSize:'2rem', marginBottom:'3rem', maxWidth:'200px', borderRadius:'10px'}}/>
           <div
             style={{
               display: "flex",
