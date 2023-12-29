@@ -26,15 +26,17 @@ const Card = ({ name, image }) => {
     <div
       style={{
         height: "400px",
+        maxWidth:'80vw',
         display: "flex",
         flexDirection: "column",
         alignItems: "center",
         boxShadow: "0px 0px 10px rgba(100,100,100)",
         margin: "15px",
+        textAlign:'center',
       }}
     >
       <img
-        style={{ height: "calc(100% - 20px - 1rem)" }}
+        style={{ height: "calc(100% - 20px - 1rem)", maxWidth:'100%'}}
         src={image}
         alt={name}
       />
@@ -53,8 +55,8 @@ const Home = () => {
         marginTop: "calc(-1*(2.15rem + 2*25px + 1rem))",
       }}
     >
-      <div id="hero" style={{width:'100%'}}>
-        <img style={{ width: "100%", height: "auto" }} src={hero} alt="hero" />
+      <div id="hero" style={{ width: "100%" }}>
+        <img className="homeHeroImg" src={hero} alt="hero" />
       </div>
       <div
         style={{
@@ -62,17 +64,26 @@ const Home = () => {
           flexDirection: "column",
           alignItems: "center",
           marginTop: "2rem",
+          maxWidth: "80%",
         }}
       >
-        <div style={{ fontSize: "1.75rem" }}>
+        <div
+          style={{
+            marginBottom: "1rem",
+            fontSize: "1.75rem",
+            textAlign: "center",
+          }}
+        >
           “Love of beauty is taste. Creation of beauty is art.”
         </div>
-        <div style={{ fontSize: "1.4rem" }}>-Ralph Waldo Emerson</div>
+        <div style={{color:'gray', fontSize: "1rem", textAlign: "right" }}>
+          -Ralph Waldo Emerson
+        </div>
       </div>
       <div
+        className="homeAbout"
         style={{
           display: "flex",
-          flexDirection: "row",
           marginTop: "4rem",
           boxShadow: "inset 0px 0px 20px 2px rgb(200,200,200)",
           width: "80%",
@@ -81,11 +92,10 @@ const Home = () => {
       >
         <div>
           <img
+            className="homeAboutImg"
             style={{
               height: "100%",
-              maxHeight:'500px',
-              borderTopLeftRadius: "10px",
-              borderBottomLeftRadius: "10px",
+              maxHeight: "500px",
               marginBottom: "-7px",
             }}
             src={about}
@@ -96,32 +106,28 @@ const Home = () => {
           style={{
             display: "flex",
             flexDirection: "column",
-            padding: "1.5rem 4rem",
+            padding: "1.5rem 2rem",
           }}
         >
-          <div style={{ fontSize: "2.5rem", marginBottom: "2rem" }}>
+          <div style={{ fontSize: "2.5rem", marginBottom: "1rem" }}>
             About Us
           </div>
-          <div style={{ lineHeight: "1.75rem", marginBottom: "2rem" }}>
-          Soham Enterprise has been ceaselessly designing beautiful homes, commercial spaces, hotels, malls and offices with unique designs. We create your dream, considering not just beauty but your comfort. Be it your bedroom to sink in after a hectic day, a kitchen that sets in with your culinary experiments, or office space to build your passion, we add a creative spark to it. Once you are on board, we turn your dream into reality.
-
-We offer a complete range of design, fit-out and contracting solutions by delivering high-quality, cost- effective services. Ensuring our relationship with our clients is our number one priority, and the integrity of our dedicated and committed team drives our dependability and maximises our clients' satisfaction.
-
-We are a team of professionals who have started their careers from zero and are now considered the most efficient craftsman in their respective fields.
+          <div style={{ lineHeight: "1.75rem", marginBottom: "1rem" }}>
+            Soham Enterprise has been ceaselessly designing beautiful homes,
+            commercial spaces, hotels, malls and offices with unique designs. We
+            create your dream, considering not just beauty but your comfort. Be
+            it your bedroom to sink in after a hectic day, a kitchen that sets
+            in with your culinary experiments, or office space to build your
+            passion, we add a creative spark to it. Once you are on board, we
+            turn your dream into reality. We offer a complete range of design,
+            fit-out and contracting solutions by delivering high-quality, cost-
+            effective services. Ensuring our relationship with our clients is
+            our number one priority, and the integrity of our dedicated and
+            committed team drives our dependability and maximises our clients'
+            satisfaction. We are a team of professionals who have started their
+            careers from zero and are now considered the most efficient
+            craftsman in their respective fields.
           </div>
-          {/* <div style={{ lineHeight: "1.75rem", marginBottom: "2rem" }}>
-            Cras sem mauris, scelerisque ut malesuada id, aliquam in sem. Orci
-            varius natoque penatibus et magnis dis parturient montes, nascetur
-            ridiculus mus. Etiam varius sapien velit, sit amet malesuada nunc
-            sagittis eu. Vivamus tristique mi massa, quis ultrices sapien
-            suscipit in. Curabitur rhoncus pharetra lacus a ullamcorper. Aliquam
-            erat volutpat. Mauris euismod mollis tincidunt. In turpis velit,
-            porta eu tellus euismod, fringilla blandit mauris. In eget euismod
-            quam, in ultricies elit. In ac eleifend mauris, sit amet porta odio.
-            Cras vitae pretium sem. Integer lacinia in ex sit amet pellentesque.
-            Donec pellentesque libero et gravida tempor. Proin in auctor libero.
-            Mauris dapibus a sapien eu pretium.
-          </div> */}
         </div>
       </div>
       <div
@@ -131,6 +137,7 @@ We are a team of professionals who have started their careers from zero and are 
           flexDirection: "column",
           alignItems: "center",
           marginTop: "4rem",
+          width:'100%'
         }}
       >
         <div style={{ fontSize: "2.5rem", marginBottom: "2rem" }}>
@@ -139,6 +146,7 @@ We are a team of professionals who have started their careers from zero and are 
         <div
           style={{
             display: "flex",
+            width:'100%',
             flexWrap: "wrap",
             alignItems: "center",
             justifyContent: "center",

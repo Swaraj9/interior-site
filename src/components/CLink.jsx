@@ -13,7 +13,6 @@ const CLink = ({ style, color, ...args }) => {
       style={{
         color: color,
         textDecoration: "none",
-        fontSize: "1.25rem",
         transitionDuration: "0.5s",
         borderBottom: hover ? `2px solid ${color}` : "2px solid transparent",
         ...style,

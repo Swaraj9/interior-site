@@ -22,6 +22,7 @@ const Navbar = () => {
 
   return (
     <div
+      className="navbar"
       style={{
         width: "100%",
         position: "fixed",
@@ -51,61 +52,58 @@ const Navbar = () => {
         alt="Logo"
         style={{
           marginLeft: "2rem",
-          fontSize: "2.15rem",
           marginRight: "5rem",
           width: "200px",
         }}
       />
-      {
-        <div
-          style={{
-            flex: 0.75,
-            display: "flex",
-            justifyContent: "space-evenly",
-          }}
+      <div
+        className="navbarLinks"
+        style={{
+          flex: 0.75,
+          display: "flex",
+        }}
+      >
+        <CLink
+          color={
+            location.pathname == "/" && scrollPosition == 0
+              ? "var(--primary)"
+              : "var(--text)"
+          }
+          to="/#hero"
         >
-          <CLink
-            color={
-              location.pathname == "/" && scrollPosition == 0
-                ? "var(--primary)"
-                : "var(--text)"
-            }
-            to="/#hero"
-          >
-            Home
-          </CLink>
-          <CLink
-            color={
-              location.pathname == "/" && scrollPosition == 0
-                ? "var(--primary)"
-                : "var(--text)"
-            }
-            to="/#portfolio"
-          >
-            Portfolio
-          </CLink>
-          <CLink
-            color={
-              location.pathname == "/" && scrollPosition == 0
-                ? "var(--primary)"
-                : "var(--text)"
-            }
-            to="testimonials"
-          >
-            Testimonials
-          </CLink>
-          <CLink
-            color={
-              location.pathname == "/" && scrollPosition == 0
-                ? "var(--primary)"
-                : "var(--text)"
-            }
-            to="services"
-          >
-            Services
-          </CLink>
-        </div>
-      }
+          Home
+        </CLink>
+        <CLink
+          color={
+            location.pathname == "/" && scrollPosition == 0
+              ? "var(--primary)"
+              : "var(--text)"
+          }
+          to="/#portfolio"
+        >
+          Portfolio
+        </CLink>
+        <CLink
+          color={
+            location.pathname == "/" && scrollPosition == 0
+              ? "var(--primary)"
+              : "var(--text)"
+          }
+          to="testimonials"
+        >
+          Testimonials
+        </CLink>
+        <CLink
+          color={
+            location.pathname == "/" && scrollPosition == 0
+              ? "var(--primary)"
+              : "var(--text)"
+          }
+          to="services"
+        >
+          Services
+        </CLink>
+      </div>
     </div>
   );
 };

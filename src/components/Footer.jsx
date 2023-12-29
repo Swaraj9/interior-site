@@ -1,15 +1,15 @@
 import React from "react";
 import { FaFacebookF, FaInstagram } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
-import logo from '../assets/logoT.png'
+import logo from "../assets/logoT.png";
 
 const Footer = () => {
   return (
     <div
+      className="footer"
       style={{
-        width: "80%",
-        marginLeft:'auto',
-        marginRight:'auto',
+        marginLeft: "auto",
+        marginRight: "auto",
         zIndex: 3,
         paddingTop: "25px",
         display: "flex",
@@ -27,15 +27,30 @@ const Footer = () => {
         }}
       >
         <a>Email Link</a>
-        <div style={{display:'flex', flexDirection:'column', alignItems:'center'}}>
-          <img src={logo} alt="Logo" style={{fontSize:'2rem', marginBottom:'3rem', maxWidth:'200px', borderRadius:'10px'}}/>
+        <div
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+          }}
+        >
+          <img
+            className="footerLogo"
+            src={logo}
+            alt="Logo"
+            style={{
+              marginBottom: "3rem",
+              maxWidth: "clamp(75px, 150px, 200px)",
+              borderRadius: "10px",
+            }}
+          />
           <div
             style={{
               display: "flex",
               justifyContent: "space-between",
               alignItems: "center",
               fontSize: "1.5rem",
-              width:'100%'
+              width: "100%",
             }}
           >
             <FaFacebookF />
@@ -43,8 +58,10 @@ const Footer = () => {
             <FaXTwitter />
           </div>
         </div>
-        <div>+91 98698 30147</div>
-        <div>+91 93240 85307</div>
+        <div>
+          <div>+91 98698 30147</div>
+          <div>+91 93240 85307</div>
+        </div>
       </div>
     </div>
   );

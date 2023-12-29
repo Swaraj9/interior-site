@@ -13,7 +13,7 @@ const Service = ({ image, right }) => {
         alignSelf: right ? "end" : "start"
       }}
     >
-      <img src={image} alt={image} />
+      <img style={{maxWidth:'100%'}} src={image} alt={image} />
     </div>
   );
 };
@@ -21,8 +21,8 @@ const Service = ({ image, right }) => {
 const Services = () => {
   return (
     <div
+      className="services"
       style={{
-        padding: "2rem 0rem",
         width: "100%",
         display: "flex",
         flexDirection: "column",

@@ -7,6 +7,7 @@ const Testimonial = ({ title, content, image, author }) => {
         display: "flex",
         flexDirection: "column",
         alignItems: "center",
+        textAlign:'center',
         borderTop: "1px solid rgb(200,200,200)",
         width: "80%",
         marginBottom: "3rem",
